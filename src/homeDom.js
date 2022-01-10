@@ -1,4 +1,6 @@
 import addItemToList from "./addItem.js";
+import displayList from "./displayList.js";
+import saveItem from "./saveItem.js";
 
 const HomeDOM = () => {
     const content = document.getElementById('content');
@@ -19,13 +21,18 @@ const HomeDOM = () => {
     const addItemBtn = document.createElement('button');
     addItemBtn.className = "add-item-btn";
     addItemBtn.textContent = "Add a task";
-    addItemBtn.addEventListener('click', () => addItemToList(input.value));
+    addItemBtn.addEventListener('click', () => {
+        saveItem(input.value);
+        addItemToList(input.value)
+    });
     form.appendChild(addItemBtn);
 
     div.appendChild(heading);
     div.appendChild(list);
+
     div.appendChild(form);
     content.appendChild(div);
+    displayList();
 
 }
 
