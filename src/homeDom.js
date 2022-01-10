@@ -1,3 +1,5 @@
+import addItemToList from "./addItem.js";
+
 const HomeDOM = () => {
     const content = document.getElementById('content');
     const div = document.createElement('div');
@@ -8,15 +10,22 @@ const HomeDOM = () => {
 
     var list = document.createElement('ul');
     list.className = 'list';
-    
+    const form = document.createElement('div');
+    form.className = "add-item-form";
+    const input = document.createElement('input');
+    input.type = "text";
+    form.appendChild(input);
+
     const addItemBtn = document.createElement('button');
     addItemBtn.textContent = "Add a task";
+    addItemBtn.addEventListener('click', () => addItemToList(input.value));
+    form.appendChild(addItemBtn);
+
     div.appendChild(heading);
     div.appendChild(list);
-    div.appendChild(addItemBtn);
+    div.appendChild(form);
     content.appendChild(div);
 
-    console.log(content.id);
 }
 
 export default HomeDOM;
