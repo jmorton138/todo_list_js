@@ -3,8 +3,6 @@ const addItemToList = (input) => {
     const listItem = document.createElement('li');
     listItem.textContent = input;
     list.appendChild(listItem);
-
-    console.log(input);
 }
 
 export default addItemToList;

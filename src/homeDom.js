@@ -17,6 +17,7 @@ const HomeDOM = () => {
     form.appendChild(input);
 
     const addItemBtn = document.createElement('button');
+    addItemBtn.className = "add-item-btn";
     addItemBtn.textContent = "Add a task";
     addItemBtn.addEventListener('click', () => addItemToList(input.value));
     form.appendChild(addItemBtn);
