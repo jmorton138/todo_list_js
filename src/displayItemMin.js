@@ -1,3 +1,6 @@
+import deleteItem from "./deleteItem.js";
+import editItemForm from "./editItemForm.js";
+
 const displayItemMin = (listName, index) => {
     var items = JSON.parse(localStorage.getItem(listName));
     const task = items[index];
