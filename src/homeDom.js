@@ -3,6 +3,7 @@ import createProject from "./createProject.js";
 import displayList from "./displayList.js";
 import saveItem from "./saveItem.js";
 import displayProjects from "./displayProjects.js";
+import addItemForm from "./addItemForm.js";
 
 const HomeDOM = () => {
     const content = document.getElementById('content');
@@ -21,23 +22,24 @@ const HomeDOM = () => {
     list.id = "Main";
     div.appendChild(list);
 
-    //add list item form
-    const form = document.createElement('div');
-    form.className = "add-item-form";
-    const input = document.createElement('input');
-    input.type = "text";
-    form.appendChild(input);
-    const addItemBtn = document.createElement('button');
-    addItemBtn.className = "add-item-btn";
-    addItemBtn.textContent = "Add a task";
-    addItemBtn.addEventListener('click', () => {
-        saveItem(input.value, list.id);
-        addItemToList(input.value);
-        input.value= "";
+    // add list item form
+    // const form = document.createElement('div');
+    // form.className = "add-item-form";
+    // const input = document.createElement('input');
+    // input.type = "text";
+    // form.appendChild(input);
+    // const addItemBtn = document.createElement('button');
+    // addItemBtn.className = "add-item-btn";
+    // addItemBtn.textContent = "Add a task";
+    // addItemBtn.addEventListener('click', () => {
+    //     saveItem(input.value, list.id);
+    //     addItemToList(input.value);
+    //     input.value= "";
         
-    });
-    form.appendChild(addItemBtn);
-    div.appendChild(form);
+    // });
+    // form.appendChild(addItemBtn);
+    addItemForm(list);
+    // div.appendChild(form);
 
 
     //new project form
