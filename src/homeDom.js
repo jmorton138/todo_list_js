@@ -52,6 +52,7 @@ const HomeDOM = () => {
     newProjectBtn.addEventListener('click', () => {
         createProject(projectName.value);
         displayProjects();
+        projectName.value = "";
     })
     newProjectForm.appendChild(newProjectBtn)
     content.appendChild(newProjectForm);
