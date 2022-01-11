@@ -1,6 +1,6 @@
-const editItem = (list, index) => {
+const editItem = (list, editedInfo, index) => {
     var items = JSON.parse(localStorage.getItem(list));
-    // edit items[index] items[index] = newInfoHash
+    items[index] = editedInfo;
     items = JSON.stringify(items);
     localStorage.setItem(list, items);
 }

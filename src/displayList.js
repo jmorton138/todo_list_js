@@ -1,5 +1,6 @@
 import expandItem from "./expandItem.js";
 import deleteItem from "./deleteItem.js";
+import editItemForm from "./editItemForm.js";
 
 const displayList = (listName) => {
     document.querySelector('.list').innerHTML = "";
@@ -11,7 +12,8 @@ const displayList = (listName) => {
     tasks.forEach( (task, index) => {
         const li = document.createElement('li');
         li.textContent = `${task.title}`;
-        li.onclick = (event) => expandItem(task, event);
+        // li.onclick = (event) => expandItem(task, event);
+        li.onclick = () => editItemForm(listName, index);
         list.appendChild(li);
     })
 
