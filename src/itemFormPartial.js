@@ -55,6 +55,7 @@ const itemFormPartial = () => {
     form.appendChild(priorLabel);
     form.appendChild(priority);
     div.appendChild(form);
+    return div
 
 }
 
