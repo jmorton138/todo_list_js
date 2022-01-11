@@ -32,7 +32,7 @@ const HomeDOM = () => {
     addItemBtn.className = "add-item-btn";
     addItemBtn.textContent = "Add a task";
     addItemBtn.addEventListener('click', () => {
-        saveItem(input.value, list.id);
+        saveItem(input.value, heading.textContent);
         addItemToList(input.value)
     });
     form.appendChild(addItemBtn);
