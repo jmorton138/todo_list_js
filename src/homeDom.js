@@ -12,14 +12,13 @@ const HomeDOM = () => {
 
     //render heading
     const heading = document.createElement('h1');
-    heading.textContent = "To Do List";
     heading.className = "list-name";
     div.appendChild(heading);
 
     //render list
     var list = document.createElement('ul');
     list.className = 'list';
-    list.id = "home-list";
+    list.id = "Main";
     div.appendChild(list);
 
     //add list item form
@@ -32,8 +31,10 @@ const HomeDOM = () => {
     addItemBtn.className = "add-item-btn";
     addItemBtn.textContent = "Add a task";
     addItemBtn.addEventListener('click', () => {
-        saveItem(input.value, heading.textContent);
-        addItemToList(input.value)
+        saveItem(input.value, list.id);
+        addItemToList(input.value);
+        input.value= "";
+        
     });
     form.appendChild(addItemBtn);
     div.appendChild(form);

@@ -1,8 +1,9 @@
 const displayList = (listName) => {
     document.querySelector('.list').innerHTML = "";
     const heading = document.querySelector('.list-name');
-    heading.textContent = listName;
+    heading.textContent = `${listName} To Do's`;
     const list = document.querySelector('ul');
+    list.id = listName;
     const tasks = JSON.parse(localStorage.getItem(listName));
     tasks.forEach( task => {
         const li = document.createElement('li');
