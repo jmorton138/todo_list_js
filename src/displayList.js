@@ -3,7 +3,7 @@ const displayList = (listName) => {
     const tasks = JSON.parse(localStorage.getItem(listName));
     tasks.forEach( task => {
         const li = document.createElement('li');
-        li.textContent = task;
+        li.textContent = task.name;
         list.appendChild(li);
     })
 

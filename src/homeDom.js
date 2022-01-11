@@ -22,17 +22,23 @@ const HomeDOM = () => {
     const addItemBtn = document.createElement('button');
     addItemBtn.className = "add-item-btn";
     addItemBtn.textContent = "Add a task";
+
     addItemBtn.addEventListener('click', () => {
         saveItem(input.value, list.id);
         addItemToList(input.value)
     });
     form.appendChild(addItemBtn);
 
+    const newProjectBtn = document.createElement('button');
+    newProjectBtn.className = "new-project-btn";
+    newProjectBtn.textContent = "Create new project";
+
     div.appendChild(heading);
     div.appendChild(list);
 
     div.appendChild(form);
     content.appendChild(div);
+    content.appendChild(newProjectBtn)
     displayList(list.id);
 
 }
