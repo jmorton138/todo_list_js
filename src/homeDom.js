@@ -1,4 +1,5 @@
 import addItemToList from "./addItem.js";
+import createProject from "./createProject.js";
 import displayList from "./displayList.js";
 import saveItem from "./saveItem.js";
 
@@ -29,16 +30,27 @@ const HomeDOM = () => {
     });
     form.appendChild(addItemBtn);
 
+    const newProjectForm = document.createElement('div');
+    newProjectForm.className = "new-project-form";
+    const projectName = document.createElement('input')
+    projectName.type = "text";
+    newProjectForm.appendChild(projectName)
+
     const newProjectBtn = document.createElement('button');
     newProjectBtn.className = "new-project-btn";
     newProjectBtn.textContent = "Create new project";
+
+    newProjectBtn.addEventListener('click', () => {
+        createProject(projectName.value);
+    })
 
     div.appendChild(heading);
     div.appendChild(list);
 
     div.appendChild(form);
     content.appendChild(div);
-    content.appendChild(newProjectBtn)
+    content.appendChild(newProjectForm);
+    newProjectForm.appendChild(newProjectBtn)
     displayList(list.id);
 
 }
