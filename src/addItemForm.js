@@ -55,16 +55,23 @@ const addItemForm = (list) => {
     priorLabel.setAttribute("for", priority.id);
     priorLabel.innerHTML = "Priority";
     form.appendChild(priorLabel);
-
     form.appendChild(priority);
-    
+
 
     const addItemBtn = document.createElement('button');
     addItemBtn.className = "add-item-btn";
     addItemBtn.textContent = "Add a task";
     addItemBtn.addEventListener('click', () => {
-        saveItem(input.value, list.id);
-        addItemToList(input.value);
+        const newTask = {
+            title: input.value,
+            description: description.value,
+            dueDate: dueDate.value,
+            priority: priority.value
+    
+        }
+        
+        saveItem(newTask, list.id);
+        addItemToList(newTask.title);
         input.value= "";
         
     });

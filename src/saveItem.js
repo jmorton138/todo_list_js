@@ -5,10 +5,8 @@ const saveItem = (newTask, listName) => {
     } else {
         list = JSON.parse(localStorage.getItem(listName));
     }
-    let task = {
-        name: newTask
-    }
-    list.push(task);
+    console.log(newTask);
+    list.push(newTask);
     localStorage.setItem(listName, JSON.stringify(list));
 }
 
