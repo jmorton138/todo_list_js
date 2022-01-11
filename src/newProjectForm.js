@@ -6,9 +6,10 @@ const newProjectForm = () => {
 
     const newProjectForm = document.createElement('div');
     newProjectForm.className = "new-project-form";
-    const projectName = document.createElement('input')
+    const projectName = document.createElement('input');
     projectName.type = "text";
     newProjectForm.appendChild(projectName)
+  
     const newProjectBtn = document.createElement('button');
     newProjectBtn.className = "new-project-btn";
     newProjectBtn.textContent = "Create new project";
