@@ -12,6 +12,7 @@ const HomeDOM = () => {
 
     var list = document.createElement('ul');
     list.className = 'list';
+    list.id = 'home-list'
     const form = document.createElement('div');
     form.className = "add-item-form";
     const input = document.createElement('input');
@@ -22,7 +23,7 @@ const HomeDOM = () => {
     addItemBtn.className = "add-item-btn";
     addItemBtn.textContent = "Add a task";
     addItemBtn.addEventListener('click', () => {
-        saveItem(input.value);
+        saveItem(input.value, list.id);
         addItemToList(input.value)
     });
     form.appendChild(addItemBtn);
@@ -32,7 +33,7 @@ const HomeDOM = () => {
 
     div.appendChild(form);
     content.appendChild(div);
-    displayList();
+    displayList(list.id);
 
 }
 

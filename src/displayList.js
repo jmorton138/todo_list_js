@@ -1,11 +1,11 @@
-const displayList = () => {
+const displayList = (listName) => {
     const list = document.querySelector('ul');
-
-    for (let i = 0; i < localStorage.length; i++) {
+    const tasks = JSON.parse(localStorage.getItem(listName));
+    tasks.forEach( task => {
         const li = document.createElement('li');
-        li.textContent = localStorage.getItem(localStorage.key(i))
+        li.textContent = task;
         list.appendChild(li);
-    }
+    })
 
 }
 
