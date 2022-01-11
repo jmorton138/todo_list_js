@@ -13,12 +13,13 @@ const HomeDOM = () => {
     //render heading
     const heading = document.createElement('h1');
     heading.textContent = "To Do List";
+    heading.className = "list-name";
     div.appendChild(heading);
 
     //render list
     var list = document.createElement('ul');
     list.className = 'list';
-    list.id = 'home-list';
+    list.id = "home-list";
     div.appendChild(list);
 
     //add list item form
@@ -49,9 +50,11 @@ const HomeDOM = () => {
     newProjectBtn.textContent = "Create new project";
     newProjectBtn.addEventListener('click', () => {
         createProject(projectName.value);
+        displayProjects();
     })
     newProjectForm.appendChild(newProjectBtn)
     content.appendChild(newProjectForm);
+    
     displayList(list.id);
     displayProjects();
 

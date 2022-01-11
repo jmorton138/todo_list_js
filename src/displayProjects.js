@@ -1,3 +1,5 @@
+import displayList from "./displayList";
+
 const displayProjects = () => {
     const content = document.getElementById('content');
     const list = document.createElement('ul');
@@ -5,6 +7,9 @@ const displayProjects = () => {
         const li = document.createElement('li');
         const name = localStorage.key(i);
         li.textContent = name;
+        li.addEventListener('click', () => {
+            displayList(name);
+        })
         list.appendChild(li);
     }
     content.appendChild(list);
