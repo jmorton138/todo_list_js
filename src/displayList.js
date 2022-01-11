@@ -12,8 +12,17 @@ const displayList = (listName) => {
     tasks.forEach( (task, index) => {
         const li = document.createElement('li');
         li.textContent = `${task.title}`;
-        // li.onclick = (event) => expandItem(task, event);
-        li.onclick = () => editItemForm(listName, index);
+        
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = "DELETED!";
+        deleteBtn.onclick = () => deleteItem(listName, index);
+        li.appendChild(deleteBtn)
+
+        const editBtn = document.createElement('button');
+        editBtn.textContent = "Edit task";
+        editBtn.onclick = () => editItemForm(listName, index);
+        li.appendChild(editBtn);
+        //li.onclick = (event) => expandItem(task, event);
         list.appendChild(li);
     })
 
