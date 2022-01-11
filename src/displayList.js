@@ -11,10 +11,7 @@ const displayList = (listName) => {
     tasks.forEach( (task, index) => {
         const li = document.createElement('li');
         li.textContent = `${task.title}`;
-        li.addEventListener('click', (event) => {
-            expandItem(task, event);
-
-        })
+        li.onclick = (event) => expandItem(task, event);
         list.appendChild(li);
     })
 
