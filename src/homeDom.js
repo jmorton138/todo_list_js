@@ -2,6 +2,7 @@ import addItemToList from "./addItem.js";
 import createProject from "./createProject.js";
 import displayList from "./displayList.js";
 import saveItem from "./saveItem.js";
+import displayProjects from "./displayProjects.js";
 
 const HomeDOM = () => {
     const content = document.getElementById('content');
@@ -52,6 +53,7 @@ const HomeDOM = () => {
     content.appendChild(newProjectForm);
     newProjectForm.appendChild(newProjectBtn)
     displayList(list.id);
+    displayProjects();
 
 }
 
