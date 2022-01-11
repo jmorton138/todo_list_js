@@ -4,6 +4,7 @@ import displayList from "./displayList.js";
 import saveItem from "./saveItem.js";
 import displayProjects from "./displayProjects.js";
 import addItemForm from "./addItemForm.js";
+import newProjectForm from "./newProjectForm.js";
 
 const HomeDOM = () => {
     const content = document.getElementById('content');
@@ -21,44 +22,27 @@ const HomeDOM = () => {
     list.className = 'list';
     list.id = "Main";
     div.appendChild(list);
-
-    // add list item form
-    // const form = document.createElement('div');
-    // form.className = "add-item-form";
-    // const input = document.createElement('input');
-    // input.type = "text";
-    // form.appendChild(input);
-    // const addItemBtn = document.createElement('button');
-    // addItemBtn.className = "add-item-btn";
-    // addItemBtn.textContent = "Add a task";
-    // addItemBtn.addEventListener('click', () => {
-    //     saveItem(input.value, list.id);
-    //     addItemToList(input.value);
-    //     input.value= "";
-        
-    // });
-    // form.appendChild(addItemBtn);
     addItemForm(list);
-    // div.appendChild(form);
+
 
 
     //new project form
-    const newProjectForm = document.createElement('div');
-    newProjectForm.className = "new-project-form";
-    const projectName = document.createElement('input')
-    projectName.type = "text";
-    newProjectForm.appendChild(projectName)
-    const newProjectBtn = document.createElement('button');
-    newProjectBtn.className = "new-project-btn";
-    newProjectBtn.textContent = "Create new project";
-    newProjectBtn.addEventListener('click', () => {
-        createProject(projectName.value);
-        displayProjects();
-        projectName.value = "";
-    })
-    newProjectForm.appendChild(newProjectBtn)
-    content.appendChild(newProjectForm);
-    
+    // const newProjectForm = document.createElement('div');
+    // newProjectForm.className = "new-project-form";
+    // const projectName = document.createElement('input')
+    // projectName.type = "text";
+    // newProjectForm.appendChild(projectName)
+    // const newProjectBtn = document.createElement('button');
+    // newProjectBtn.className = "new-project-btn";
+    // newProjectBtn.textContent = "Create new project";
+    // newProjectBtn.addEventListener('click', () => {
+    //     createProject(projectName.value);
+    //     displayProjects();
+    //     projectName.value = "";
+    // })
+    // newProjectForm.appendChild(newProjectBtn)
+    // content.appendChild(newProjectForm);
+    newProjectForm();
     displayList(list.id);
     displayProjects();
 
