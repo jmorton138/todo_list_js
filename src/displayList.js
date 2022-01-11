@@ -10,9 +10,9 @@ const displayList = (listName) => {
     const tasks = JSON.parse(localStorage.getItem(listName));
     tasks.forEach( (task, index) => {
         const li = document.createElement('li');
-        li.textContent = `title: ${task.title},description: ${task.description}, due: ${task.dueDate}, priority: ${task.priority}`;
-        li.addEventListener('click', () => {
-            deleteItem(listName, index);
+        li.textContent = `${task.title}`;
+        li.addEventListener('click', (event) => {
+            expandItem(task, event);
 
         })
         list.appendChild(li);
