@@ -22,27 +22,10 @@ const HomeDOM = () => {
     list.className = 'list';
     list.id = "Main";
     div.appendChild(list);
+
     addItemForm(list);
-
-
-
-    //new project form
-    // const newProjectForm = document.createElement('div');
-    // newProjectForm.className = "new-project-form";
-    // const projectName = document.createElement('input')
-    // projectName.type = "text";
-    // newProjectForm.appendChild(projectName)
-    // const newProjectBtn = document.createElement('button');
-    // newProjectBtn.className = "new-project-btn";
-    // newProjectBtn.textContent = "Create new project";
-    // newProjectBtn.addEventListener('click', () => {
-    //     createProject(projectName.value);
-    //     displayProjects();
-    //     projectName.value = "";
-    // })
-    // newProjectForm.appendChild(newProjectBtn)
-    // content.appendChild(newProjectForm);
     newProjectForm();
+    
     displayList(list.id);
     displayProjects();
 
