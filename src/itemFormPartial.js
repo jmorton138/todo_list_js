@@ -1,14 +1,14 @@
-const itemFormPartial = () => {
+const itemFormPartial = (action) => {
 
-    const div = document.querySelector('.list-container');
+    const div = document.querySelector('#content');
 
     const form = document.createElement('div');
-    form.className = "item-form";
+    form.className = `${action}-item-form`;
 
     const input = document.createElement('input');
     input.type = "text";
     input.placeholder = "Task name";
-    input.id = "task-title";
+    input.id = `${action}-task-title`;
     var itemLabel = document.createElement('label');
     itemLabel.setAttribute("for", input.id);
     itemLabel.innerHTML = "Task name";
@@ -18,7 +18,7 @@ const itemFormPartial = () => {
     const description = document.createElement('input');
     description.type = "text";
     description.placeholder = "Description";
-    description.id ="task-desc"
+    description.id =`${action}-task-desc`;
     var descLabel = document.createElement('label');
     descLabel.setAttribute("for", description.id);
     descLabel.innerHTML = "Description";
@@ -27,7 +27,7 @@ const itemFormPartial = () => {
 
     const dueDate = document.createElement('input');
     dueDate.type = "date";
-    dueDate.id = "task-date";
+    dueDate.id = `${action}-task-date`;
     var dateLabel = document.createElement('label');
     dateLabel.setAttribute("for", dueDate.id);
     dateLabel.innerHTML = " Due date";
@@ -36,7 +36,7 @@ const itemFormPartial = () => {
 
     const priority = document.createElement('select');
     priority.className = "priority-select";
-    priority.id = "task-priority";
+    priority.id = `${action}-task-priority`;
     var option1 = document.createElement("option");
     priority.appendChild(option1);
     var option2 = document.createElement("option");

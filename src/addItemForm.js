@@ -3,7 +3,7 @@ import addItemToList from "./addItem.js";
 import itemFormPartial from "./itemFormPartial.js";
 
 const addItemForm = (list) => {
-    const partial = itemFormPartial();
+    const partial = itemFormPartial('add');
     var input = document.querySelector('#task-title');
     var description =  document.querySelector('#task-desc');
     var dueDate =  document.querySelector('#task-date');
@@ -25,7 +25,7 @@ const addItemForm = (list) => {
         input.value= "";
         
     });
-    const itemForm = document.querySelector('.item-form');
+    const itemForm = document.querySelector('.add-item-form');
     itemForm.appendChild(addItemBtn);
 
 }

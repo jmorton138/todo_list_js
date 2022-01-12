@@ -1,22 +1,46 @@
+
 #content {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    position: relative;
 }
 
 
 
 * {
     border: 1px solid red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
 }
 
 .new-project-form {
+    position: absolute;
     display: none;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }
 
-.item-form {
-    display: grid;
+.add-item-form {
+    position: absolute;
+    display: none;
     grid-template-columns: 50%;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    background-color: aqua;
 }
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+
 .item-form label {
     margin-top: 10px;
     margin-bottom: 5px;

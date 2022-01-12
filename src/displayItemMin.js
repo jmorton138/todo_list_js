@@ -1,4 +1,5 @@
 import deleteItem from "./deleteItem.js";
+import displayFormController from "./displayForm.js";
 import editItemForm from "./editItemForm.js";
 
 const displayItemMin = (listName, index) => {
@@ -7,6 +8,7 @@ const displayItemMin = (listName, index) => {
     const div = document.createElement('div');
     const text = document.createElement('div');
     text.textContent = `${task.title}`;
+    text.className = "task-body";
     div.appendChild(text);
 
     
@@ -17,7 +19,11 @@ const displayItemMin = (listName, index) => {
 
     const editBtn = document.createElement('button');
     editBtn.textContent = "Edit task";
-    editBtn.onclick = () => editItemForm(listName, index);
+    editBtn.onclick = () => {
+        displayFormController('edit');
+        editItemForm(listName, index);
+    };
+
     div.appendChild(editBtn);
     // div.onclick = (event) => expandItem(task, event);
 

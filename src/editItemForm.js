@@ -2,16 +2,15 @@ import itemFormPartial from "./itemFormPartial.js";
 import editItem from "./editItem.js";
 
 const editItemForm = (list, index) => {
-    const partial = itemFormPartial();
-
+    const partial = itemFormPartial('edit');
     //retreive task from storage
     var items = JSON.parse(localStorage.getItem(list));
     const task = items[index];
     // fill edit form with task's data
-    var input = document.querySelector('#task-title');
-    var description =  document.querySelector('#task-desc');
-    var dueDate =  document.querySelector('#task-date');
-    var priority =  document.querySelector('#task-priority');
+    var input = document.querySelector('#edit-task-title');
+    var description =  document.querySelector('#edit-task-desc');
+    var dueDate =  document.querySelector('#edit-task-date');
+    var priority =  document.querySelector('#edit-task-priority');
     input.value = task.title;
     description.value = task.description;
     dueDate.value = task.dueDate;
