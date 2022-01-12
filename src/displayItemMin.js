@@ -5,7 +5,9 @@ const displayItemMin = (listName, index) => {
     var items = JSON.parse(localStorage.getItem(listName));
     const task = items[index];
     const div = document.createElement('div');
-    div.textContent = `${task.title}`;
+    const text = document.createElement('div');
+    text.textContent = `${task.title}`;
+    div.appendChild(text);
 
     
     const deleteBtn = document.createElement('button');
