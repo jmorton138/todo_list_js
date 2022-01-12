@@ -10,8 +10,8 @@ const displayItemMin = (listName, index) => {
     
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = "DELETED!";
-    deleteBtn.oncldivk = () => deleteItem(listName, index);
-    div.appendChild(deleteBtn)
+    deleteBtn.onclick = () => deleteItem(listName, index);
+    div.prepend(deleteBtn)
 
     const editBtn = document.createElement('button');
     editBtn.textContent = "Edit task";

@@ -41,7 +41,10 @@
     grid-template-columns: 1fr;
     padding: 0;
 }
-.list div {
+.list-item {
     margin: 0;
     justify-self: start;
+    
+    
 }
+
