@@ -1,5 +1,4 @@
 import saveItem from "./saveItem.js";
-import addItemToList from "./addItem.js";
 import itemFormPartial from "./itemFormPartial.js";
 import displayFormController from "./displayForm.js";
 import displayList from "./displayList.js";
@@ -23,7 +22,6 @@ const addItemForm = (list) => {
             priority: priority.value
         }
         saveItem(newTask, list.id);
-        //addItemToList(newTask);
         displayList(list.id);
         displayFormController();
         

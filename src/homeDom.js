@@ -1,4 +1,3 @@
-import addItemToList from "./addItem.js";
 import createProject from "./createProject.js";
 import displayList from "./displayList.js";
 import saveItem from "./saveItem.js";

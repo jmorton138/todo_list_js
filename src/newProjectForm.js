@@ -1,4 +1,5 @@
 import createProject from "./createProject.js";
+import displayFormController from "./displayForm.js";
 import displayProjects from "./displayProjects.js";
 
 const newProjectForm = () => {
@@ -16,7 +17,7 @@ const newProjectForm = () => {
     newProjectBtn.addEventListener('click', () => {
         createProject(projectName.value);
         displayProjects();
-        projectName.value = "";
+        displayFormController();
     })
     newProjectForm.appendChild(newProjectBtn)
     content.appendChild(newProjectForm);

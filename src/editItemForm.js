@@ -1,5 +1,7 @@
 import itemFormPartial from "./itemFormPartial.js";
 import editItem from "./editItem.js";
+import displayList from "./displayList.js";
+import displayFormController from "./displayForm.js";
 
 const editItemForm = (list, index) => {
     const partial = itemFormPartial('edit');
@@ -28,6 +30,8 @@ const editItemForm = (list, index) => {
             priority: priority.value
         }
         editItem(list, taskEdits, index);
+        displayList(list);
+        displayFormController();
         
     });
     // form.appendChild(editBtn);
