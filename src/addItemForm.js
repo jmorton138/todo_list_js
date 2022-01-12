@@ -1,13 +1,15 @@
 import saveItem from "./saveItem.js";
 import addItemToList from "./addItem.js";
 import itemFormPartial from "./itemFormPartial.js";
+import displayFormController from "./displayForm.js";
+import displayList from "./displayList.js";
 
 const addItemForm = (list) => {
     const partial = itemFormPartial('add');
-    var input = document.querySelector('#task-title');
-    var description =  document.querySelector('#task-desc');
-    var dueDate =  document.querySelector('#task-date');
-    var priority =  document.querySelector('#task-priority');
+    var input = document.querySelector('#add-task-title');
+    var description =  document.querySelector('#add-task-desc');
+    var dueDate =  document.querySelector('#add-task-date');
+    var priority =  document.querySelector('#add-task-priority');
 
     const addItemBtn = document.createElement('button');
     addItemBtn.className = "add-item-btn";
@@ -21,8 +23,9 @@ const addItemForm = (list) => {
             priority: priority.value
         }
         saveItem(newTask, list.id);
-        addItemToList(newTask.title);
-        input.value= "";
+        //addItemToList(newTask);
+        displayList(list.id);
+        displayFormController();
         
     });
     const itemForm = document.querySelector('.add-item-form');

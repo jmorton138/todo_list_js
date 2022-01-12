@@ -16,14 +16,19 @@
 .new-project-form {
     position: absolute;
     display: none;
+    grid-gap: 15px;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+    background-color: aqua;
+
 }
 
 .add-item-form {
     position: absolute;
     display: none;
     grid-template-columns: 50%;
+    grid-gap: 15px;
+
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     background-color: aqua;
@@ -31,8 +36,12 @@
 
 .edit-item-form {
     position: absolute;
+    grid-gap: 15px;
+
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+    background-color: aqua;
+
 
 }
 
