@@ -17,8 +17,9 @@ const displayItemMin = (listName, index) => {
     editBtn.textContent = "Edit task";
     editBtn.onclick = () => editItemForm(listName, index);
     div.appendChild(editBtn);
+    // div.onclick = (event) => expandItem(task, event);
+
     return div
-    //li.onclick = (event) => expandItem(task, event);
 
 
 }
