@@ -7,7 +7,7 @@ const displayFormController = (action) => {
     if (action === 'edit') {
         if (editform !== null) {
             document.querySelectorAll('.edit-item-form').forEach(element => {
-               element.innerHTML = ""; 
+               element.outerHTML = ""; 
             });
         }
         projform.style.display = "none";
@@ -17,7 +17,7 @@ const displayFormController = (action) => {
     if (action === 'add-item') {
         if (editform !== null) {
             document.querySelectorAll('.edit-item-form').forEach(element => {
-               element.innerHTML = ""; 
+               element.outerHTML = ""; 
             });
         }
         itemform.style.display = "grid";
@@ -28,7 +28,7 @@ const displayFormController = (action) => {
     if (action === 'add-project') {
         if (editform !== null) {
             document.querySelectorAll('.edit-item-form').forEach(element => {
-               element.innerHTML = ""; 
+               element.outerHTML = ""; 
             });
         }
         projform.style.display = "grid";
