@@ -25,7 +25,8 @@ const addItemForm = (list) => {
         input.value= "";
         
     });
-    partial.appendChild(addItemBtn);
+    const itemForm = document.querySelector('.item-form');
+    itemForm.appendChild(addItemBtn);
 
 }
 
