@@ -20,7 +20,7 @@ const displayItemMin = (listName, index) => {
     const span = document.createElement('span');
     span.className = "checkmark";
     checklabel.appendChild(span);
-    // deleteBtn.onclick = () => deleteItem(listName, index);
+    deleteBtn.onclick = () => deleteItem(listName, index);
     div.prepend(checklabel);
 
     const editBtn = document.createElement('button');
