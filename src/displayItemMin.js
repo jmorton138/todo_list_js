@@ -11,11 +11,17 @@ const displayItemMin = (listName, index) => {
     text.className = "task-body";
     div.appendChild(text);
 
-    
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = "DELETED!";
-    deleteBtn.onclick = () => deleteItem(listName, index);
-    div.prepend(deleteBtn)
+    const checklabel = document.createElement('label');
+    checklabel.className = "check-container";
+    const deleteBtn = document.createElement('input');
+    deleteBtn.type = "checkbox";
+    checklabel.appendChild(deleteBtn);
+    // deleteBtn.textContent = "DELETED!";
+    const span = document.createElement('span');
+    span.className = "checkmark";
+    checklabel.appendChild(span);
+    // deleteBtn.onclick = () => deleteItem(listName, index);
+    div.prepend(checklabel);
 
     const editBtn = document.createElement('button');
     editBtn.textContent = "Edit task";
