@@ -17,6 +17,9 @@
     padding: 30px;
     position: absolute;
     display: none;
+    top: 70px;
+    justify-self: center;
+    grid-template-columns: 2fr 1fr;
     grid-gap: 15px;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
@@ -46,18 +49,6 @@
     background-color: aqua;
 }
 
-
-
-/* .edit-item-form {
-    padding: 30px;
-    position: absolute;
-    grid-gap: 15px;
-
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-    background-color: aqua;
-
-} */
 .form-section-wrapper {
     display: grid;
     grid-template-columns: 1fr;
