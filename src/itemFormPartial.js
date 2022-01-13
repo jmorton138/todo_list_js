@@ -5,6 +5,7 @@ const itemFormPartial = (action) => {
     const form = document.createElement('div');
     form.className = `${action}-item-form`;
 
+    const inputwrapper = document.createElement('div');
     const input = document.createElement('input');
     input.type = "text";
     input.placeholder = "Task name";
@@ -12,9 +13,11 @@ const itemFormPartial = (action) => {
     var itemLabel = document.createElement('label');
     itemLabel.setAttribute("for", input.id);
     itemLabel.innerHTML = "Task name";
-    form.appendChild(itemLabel);
-    form.appendChild(input);
-
+    inputwrapper.appendChild(itemLabel);
+    inputwrapper.appendChild(input);
+    form.appendChild(inputwrapper);
+    
+    const descwrapper = document.createElement('div');
     const description = document.createElement('input');
     description.type = "text";
     description.placeholder = "Description";
@@ -22,18 +25,22 @@ const itemFormPartial = (action) => {
     var descLabel = document.createElement('label');
     descLabel.setAttribute("for", description.id);
     descLabel.innerHTML = "Description";
-    form.appendChild(descLabel);
-    form.appendChild(description);
-
+    descwrapper.appendChild(descLabel);
+    descwrapper.appendChild(description);
+    form.appendChild(descwrapper);
+    
+    const datewrapper = document.createElement('div');
     const dueDate = document.createElement('input');
     dueDate.type = "date";
     dueDate.id = `${action}-task-date`;
     var dateLabel = document.createElement('label');
     dateLabel.setAttribute("for", dueDate.id);
     dateLabel.innerHTML = " Due date";
-    form.appendChild(dateLabel);
-    form.appendChild(dueDate);
+    datewrapper.appendChild(dateLabel);
+    datewrapper.appendChild(dueDate);
+    form.appendChild(datewrapper);
 
+    const priorwrapper = document.createElement('div');
     const priority = document.createElement('select');
     priority.className = "priority-select";
     priority.id = `${action}-task-priority`;
@@ -52,8 +59,10 @@ const itemFormPartial = (action) => {
     var priorLabel = document.createElement('label');
     priorLabel.setAttribute("for", priority.id);
     priorLabel.innerHTML = "Priority";
-    form.appendChild(priorLabel);
-    form.appendChild(priority);
+    priorwrapper.appendChild(priorLabel);
+    priorwrapper.appendChild(priority);
+    form.appendChild(priorwrapper);
+    
     div.appendChild(form);
     return form
 
