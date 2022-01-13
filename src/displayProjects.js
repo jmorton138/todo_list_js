@@ -18,6 +18,7 @@ const displayProjects = () => {
             const li = document.createElement('div');
             const name = localStorage.key(i);
             li.textContent = name;
+            li.className = "project";
             li.addEventListener('click', () => {
                 displayList(name);
             })
