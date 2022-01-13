@@ -25,7 +25,7 @@ const displayProjects = () => {
             list.appendChild(li);
         }
         list.prepend(heading);
-        content.appendChild(list);
+        content.prepend(list);
 }
 
 export default displayProjects;
