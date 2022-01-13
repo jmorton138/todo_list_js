@@ -102,6 +102,19 @@ nav div {
     background-color: aqua;
 }
 
+.item-expand {
+    margin: auto;
+    padding: 30px;
+    position: absolute;
+    top: 70px;
+    justify-self: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    background-color: aqua;
+
+}
 .form-section-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -166,17 +179,34 @@ nav div {
     display: grid;
     align-items: center;
     grid-gap: 10px;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
     justify-content: space-between;
     padding: 30px;
     background: rgba(241, 235, 245, 0.7);
     border-radius: 30px;
     animation: fadeIn 1s;
-
-
-    
 }
 
+.list-item:hover {
+    background: rgba(241, 235, 245, 0.9);
+
+}
+
+.edit-btn {
+    align-self: start;
+    justify-self: end;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background:none;
+}
+.edit-btn:hover, .expand-btn:hover {
+    color:darkmagenta;
+}
+.expand-btn {
+    background: none;
+    border: none;
+}
 .check-container {
     align-self: start;
     display: block;
@@ -205,12 +235,14 @@ nav div {
   .checkmark {
     position: absolute;
     left: 10px;
-    top: 0;
+    top: 20px;
     height: 25px;
     width: 25px;
     background-color: #eee;
     transform: scale(2.3);
     border-radius: 15px;
+    border: 3px solid darkcyan;
+
   }
   
   /* On mouse-over, add a grey background color */

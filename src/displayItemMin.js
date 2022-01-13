@@ -1,6 +1,7 @@
 import deleteItem from "./deleteItem.js";
 import displayFormController from "./displayForm.js";
 import editItemForm from "./editItemForm.js";
+import expandItem from "./expandItem.js";
 
 const displayItemMin = (listName, index) => {
     var items = JSON.parse(localStorage.getItem(listName));
@@ -24,14 +25,17 @@ const displayItemMin = (listName, index) => {
     div.prepend(checklabel);
 
     const editBtn = document.createElement('button');
-    editBtn.textContent = "Edit task";
+    editBtn.className = "edit-btn fas fa-edit fa-2x";
     editBtn.onclick = () => {
         displayFormController('edit');
         editItemForm(listName, index);
     };
-
     div.appendChild(editBtn);
-    // div.onclick = (event) => expandItem(task, event);
+
+    const expandBtn = document.createElement('button');
+    expandBtn.className = "expand-btn fas fa-ellipsis-h fa-2x";
+    div.appendChild(expandBtn);
+    expandBtn.onclick = () => expandItem(listName, task);
 
     return div
 
