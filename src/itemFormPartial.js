@@ -6,6 +6,7 @@ const itemFormPartial = (action) => {
     form.className = `${action}-item-form`;
 
     const inputwrapper = document.createElement('div');
+    inputwrapper.className = "form-section-wrapper";
     const input = document.createElement('input');
     input.type = "text";
     input.placeholder = "Task name";
@@ -18,6 +19,7 @@ const itemFormPartial = (action) => {
     form.appendChild(inputwrapper);
     
     const descwrapper = document.createElement('div');
+    descwrapper.className = "form-section-wrapper";
     const description = document.createElement('input');
     description.type = "text";
     description.placeholder = "Description";
@@ -30,6 +32,7 @@ const itemFormPartial = (action) => {
     form.appendChild(descwrapper);
     
     const datewrapper = document.createElement('div');
+    datewrapper.className = "form-section-wrapper";
     const dueDate = document.createElement('input');
     dueDate.type = "date";
     dueDate.id = `${action}-task-date`;
@@ -41,6 +44,7 @@ const itemFormPartial = (action) => {
     form.appendChild(datewrapper);
 
     const priorwrapper = document.createElement('div');
+    priorwrapper.className = "form-section-wrapper";
     const priority = document.createElement('select');
     priority.className = "priority-select";
     priority.id = `${action}-task-priority`;

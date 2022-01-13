@@ -24,20 +24,31 @@
 
 }
 
+.edit-item-form {
+    display: grid;
+}
+
 .add-item-form {
+    display: none;
+
+}
+
+.add-item-form, .edit-item-form {
+    margin: auto;
     padding: 30px;
     position: absolute;
     top: 70px;
-    display: none;
-    grid-template-columns: 70%;
+    justify-self: center;
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
-
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     background-color: aqua;
 }
 
-.edit-item-form {
+
+
+/* .edit-item-form {
     padding: 30px;
     position: absolute;
     grid-gap: 15px;
@@ -46,9 +57,11 @@
     animation: fadeIn 1s;
     background-color: aqua;
 
-
+} */
+.form-section-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
 }
-
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
     from {opacity: 0;}
@@ -65,11 +78,9 @@
     margin-top: 10px;
     margin-bottom: 5px;
 }
-.item-form  input[type=date] {
-    width: 200px;
-}
+/* .item-form  input[type=date] {
+} */
 .item-form select {
-    width: 100px;
     margin-bottom: 10px;
 }
 
