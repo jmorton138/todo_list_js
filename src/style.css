@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color: #434544;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
@@ -161,7 +161,7 @@ input[type=date], select {
     display: grid;
     grid-template-columns: 3fr 5fr 2fr 1fr;
     justify-content: space-between;
-    grid-gap: 15px;
+    grid-gap: 23px;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     background-color: rgba(241, 235, 245);
@@ -170,6 +170,13 @@ input[type=date], select {
     font-size: large;
 
 
+}
+
+.item-section-wrapper div {
+    margin-top: 10px;
+}
+.item-section-wrapper label {
+    font-weight: bold;
 }
 .form-section-wrapper {
     display: grid;

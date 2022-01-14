@@ -1,7 +1,7 @@
 import collapseItem from "./collapseItem";
 import displayFormController from "./displayForm";
 
-const expandItem = (list, task) => {
+const expandItem = (task) => {
     displayFormController()
     var div = document.createElement('div');
     div.className ="item-expand";
@@ -18,7 +18,7 @@ const expandItem = (list, task) => {
     title.textContent = `${task.title}`;
     var itemLabel = document.createElement('label');
     itemLabel.setAttribute("for", title.id);
-    itemLabel.innerHTML = "Task name";
+    itemLabel.innerHTML = "Task";
     titlewrapper.appendChild(itemLabel);
     titlewrapper.appendChild(title);
     div.appendChild(titlewrapper);
@@ -42,7 +42,7 @@ const expandItem = (list, task) => {
     dueDate.textContent = `${task.dueDate}`;
     var itemLabel = document.createElement('label');
     itemLabel.setAttribute("for", dueDate.id);
-    itemLabel.innerHTML = "Due date:";
+    itemLabel.innerHTML = "Due date";
     dueDatewrapper.appendChild(itemLabel);
     dueDatewrapper.appendChild(dueDate);
     div.appendChild(dueDatewrapper);
@@ -54,7 +54,7 @@ const expandItem = (list, task) => {
     priority.textContent = `${task.priority}`;
     var itemLabel = document.createElement('label');
     itemLabel.setAttribute("for", priority.id);
-    itemLabel.innerHTML = "Priority:";
+    itemLabel.innerHTML = "Priority";
     prioritywrapper.appendChild(itemLabel);
     prioritywrapper.appendChild(priority);
     div.appendChild(prioritywrapper);

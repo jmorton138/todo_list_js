@@ -35,7 +35,7 @@ const displayItemMin = (listName, index) => {
     const expandBtn = document.createElement('button');
     expandBtn.className = "expand-btn fas fa-ellipsis-h fa-2x";
     div.appendChild(expandBtn);
-    expandBtn.onclick = () => expandItem(listName, task);
+    expandBtn.onclick = () => expandItem(task);
 
     return div
 
