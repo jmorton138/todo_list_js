@@ -12,6 +12,17 @@ const displayItemMin = (listName, index) => {
     text.className = "task-body";
     div.appendChild(text);
 
+    const prior = document.createElement('div');
+    prior.className = "fas fa-circle";
+    if (task.priority === "High") {
+        prior.style.color = "red";
+    } else if (task.priority === "Mid") {
+        prior.style.color = "darkorange";
+    } else if (task.priority === "Low") {
+        prior.style.color = "green";
+    }
+    
+
     const checklabel = document.createElement('label');
     checklabel.className = "check-container";
     const deleteBtn = document.createElement('input');
@@ -23,6 +34,7 @@ const displayItemMin = (listName, index) => {
     checklabel.appendChild(span);
     deleteBtn.onclick = () => deleteItem(listName, index);
     div.prepend(checklabel);
+    div.prepend(prior);
 
     const editBtn = document.createElement('button');
     editBtn.className = "edit-btn fas fa-edit fa-2x";
