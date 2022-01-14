@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 * {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     color: #434544;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
@@ -21,7 +21,7 @@ nav {
     padding: 20px;
     width: 20%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 50px;
     border-radius: 50px;
     background: rgba(241, 235, 245, 0.4);
 
@@ -36,6 +36,11 @@ nav div {
     text-align: center;
 
 
+
+}
+
+nav div:hover {
+    background: rgba(241, 235, 245, 0.8);
 
 }
 
@@ -61,23 +66,36 @@ nav div {
     padding: 20px;
 }
 
-
-
-
-
-
 .new-project-form {
-    padding: 30px;
+    width: 70%;
+    padding: 100px;
     position: absolute;
     display: none;
     top: 70px;
     justify-self: center;
-    grid-template-columns: 2fr 1fr;
+    border-radius: 40px;
+    grid-template-rows: 1fr 1fr;
+    align-content: space-around;
+
+    align-content: center;
     grid-gap: 15px;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-    background-color: aqua;
+    background-color: rgba(241, 235, 245);
+    box-shadow: -10px 10px 20px grey;
 
+
+}
+
+input, select {
+    border-radius: 20px;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 30px;
+    border: 1px solid grey;
+}
+input[type=date], select {
+    width: 60%;
 }
 
 .edit-item-form {
@@ -91,28 +109,66 @@ nav div {
 
 .add-item-form, .edit-item-form {
     margin: auto;
-    padding: 30px;
+    padding: 150px;
     position: absolute;
     top: 70px;
     justify-self: center;
-    grid-template-columns: repeat(5, 1fr);
+    border-radius: 40px;
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 15px;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-    background-color: aqua;
+    background-color: rgba(241, 235, 245);
+    box-shadow: -10px 10px 20px grey;
+}
+
+.add-item-btn, .edit-form-btn, .new-project-btn {
+    padding: 10px;
+    border-radius: 30px;
+    background: rgba(0, 255, 255, .5);
+    font-size: large;
+    border: none;
+
+}
+
+.new-project-btn {
+    padding: 20px;
+}
+.add-item-btn:hover, .edit-form-btn:hover, .new-project-btn:hover {
+    background: rgba(0, 255, 255, .7);
+}
+
+.close-popup {
+    border: none;
+    align-self: start;
+    justify-self: end;
+    position: absolute;
+    border-radius: 50%;
+    right: 20px;
+    top: 20px;
+}
+.close-popup:hover {
+    color:grey;
 }
 
 .item-expand {
     margin: auto;
-    padding: 30px;
+    padding: 100px 150px;
+    width: 100%;
     position: absolute;
     top: 70px;
     justify-self: center;
-    grid-template-columns: repeat(5, 1fr);
+    display: grid;
+    grid-template-columns: 3fr 5fr 2fr 1fr;
+    justify-content: space-between;
     grid-gap: 15px;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-    background-color: aqua;
+    background-color: rgba(241, 235, 245);
+    box-shadow: -10px 10px 20px grey;
+    border-radius: 40px;
+    font-size: large;
+
 
 }
 .form-section-wrapper {

@@ -1,9 +1,15 @@
+import displayFormController from "./displayForm";
+
 const itemFormPartial = (action) => {
 
     const div = document.querySelector('#content');
 
     const form = document.createElement('div');
     form.className = `${action}-item-form`;
+    const closePopup = document.createElement('button');
+    closePopup.className = "fas fa-times close-popup fa-2x";
+    closePopup.onclick = () => displayFormController();
+    form.appendChild(closePopup);
 
     const inputwrapper = document.createElement('div');
     inputwrapper.className = "form-section-wrapper";

@@ -19,7 +19,7 @@ const editItemForm = (list, index) => {
     priority.value = task.priority;
     
     const editBtn = document.createElement('button');
-    editBtn.className ="edit-btn";
+    editBtn.className ="edit-form-btn";
     editBtn.textContent = "Submit edits";
     editBtn.addEventListener('click', () => {
         
