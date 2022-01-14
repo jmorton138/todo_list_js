@@ -27,7 +27,12 @@ const expandItem = (task) => {
     descriptionwrapper.className = "item-section-wrapper";
     const description = document.createElement('div');
     description.id = "task-description";
-    description.textContent = `${task.description}`;
+
+    if (task.description === "") {
+        description.textContent = "N/A";
+    } else {
+        description.textContent = `${task.description}`;
+    }
     var itemLabel = document.createElement('label');
     itemLabel.setAttribute("for", description.id);
     itemLabel.innerHTML = "Details";
@@ -39,7 +44,11 @@ const expandItem = (task) => {
     dueDatewrapper.className = "item-section-wrapper";
     const dueDate = document.createElement('div');
     dueDate.id = "task-duedate";
-    dueDate.textContent = `${task.dueDate}`;
+    if (task.dueDate === "") {
+        dueDate.textContent = "N/A";
+    } else {
+        dueDate.textContent = `${task.dueDate}`;
+    }
     var itemLabel = document.createElement('label');
     itemLabel.setAttribute("for", dueDate.id);
     itemLabel.innerHTML = "Due date";

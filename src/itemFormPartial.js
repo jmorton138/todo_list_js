@@ -7,7 +7,7 @@ const itemFormPartial = (action) => {
     const form = document.createElement('div');
     form.className = `${action}-item-form`;
     const closePopup = document.createElement('button');
-    closePopup.className = "fas fa-times close-popup fa-2x";
+    closePopup.className = "fas fa-times close-popup";
     closePopup.onclick = () => displayFormController();
     form.appendChild(closePopup);
 
