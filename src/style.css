@@ -1,6 +1,5 @@
 html, body {
     min-height: 100%;
-    overflow: auto;
 }
 * {
     border: 1px solid red;
@@ -61,7 +60,7 @@ nav div:hover {
 }
 
 footer {
-    height: 100px;
+    height: 500px;
     margin-top: 300px;
 }
 .list-name {
@@ -118,8 +117,9 @@ input[type=date], select {
 .add-item-form, .edit-item-form {
     margin: auto;
     padding: 150px;
+    padding-bottom: 100px;
     position: absolute;
-    top: 70px;
+    top: 40px;
     justify-self: center;
     border-radius: 40px;
     grid-template-rows: repeat(5, 1fr);
