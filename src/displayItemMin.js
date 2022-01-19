@@ -13,7 +13,7 @@ const displayItemMin = (listName, index) => {
     div.appendChild(text);
 
     const prior = document.createElement('div');
-    prior.className = "fas fa-circle";
+    prior.className = "fas fa-circle priority-circle";
     if (task.priority === "High") {
         prior.style.color = "red";
     } else if (task.priority === "Mid") {
