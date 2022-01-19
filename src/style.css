@@ -2,7 +2,7 @@ html, body {
     min-height: 100%;
 }
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color: #434544;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
