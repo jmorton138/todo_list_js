@@ -8,6 +8,7 @@ const displayProjects = () => {
     if (list === null) {
         list = document.createElement('div');
         list.className = "projects";
+
     } else {
         list.innerHTML = "";
     }

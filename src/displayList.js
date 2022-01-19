@@ -10,11 +10,15 @@ const displayList = (listName) => {
     const list = document.querySelector('ul');
     list.id = listName;
     const tasks = JSON.parse(localStorage.getItem(listName));
-    tasks.forEach( (task, index) => {
-        const item = displayItemMin(listName, index);
-        item.className = "list-item";
-        list.appendChild(item);
-    })
+    if (tasks !== null) {
+        tasks.forEach( (task, index) => {
+            const item = displayItemMin(listName, index);
+            item.className = "list-item";
+            list.appendChild(item);
+        })
+
+    }
+
 
 }
 

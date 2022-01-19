@@ -58,7 +58,6 @@ nav div:hover {
     position: relative;
     background: rgba(241, 235, 245, 0.5);
     border-radius: 40px;
-    overflow: auto;
 }
 
 footer {
@@ -118,7 +117,6 @@ input[type=date], select {
 
 .add-item-form, .edit-item-form {
     margin: auto;
-    overflow: auto;
     padding: 150px;
     position: absolute;
     top: 70px;
