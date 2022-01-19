@@ -75,6 +75,7 @@ footer {
 }
 
 .new-project-form {
+    overflow: auto;
     width: 70%;
     padding: 100px;
     position: absolute;
@@ -117,6 +118,7 @@ input[type=date], select {
 
 .add-item-form, .edit-item-form {
     margin: auto;
+    overflow: auto;
     padding: 150px;
     position: absolute;
     top: 70px;
@@ -272,7 +274,7 @@ input[type=date], select {
 
     .task-body {
         text-align: center;
-        padding-left: 30px;
+        padding-left: 10px;
     }
 
 
@@ -291,6 +293,25 @@ input[type=date], select {
 
 
     }
+    .add-item-form {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+
+    }
+
+}
+@media (max-width: 750px) {
+    .new-project-form {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+    .list-name {
+        width: 80%;
+    }
+
 
 }
 
@@ -304,10 +325,15 @@ input[type=date], select {
     .list-item {
         margin-left: 0;
         margin-right: 0;
-        grid-template-columns:repeat(3, 1fr);
+        grid-template-columns: 1fr 3fr;
+        align-items: start;
     }
     .priority-circle, .edit-btn, .expand-btn   {
         display: none !important;
+    }
+    .task-body {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .projects {
         margin-top: 50px;
@@ -322,6 +348,18 @@ input[type=date], select {
         margin-left: 3px;
         margin-right: 3px;
         margin-bottom: 0px;
+    }
+    .checkmark {
+        transform: scale(1.7) !important;
+        top: 10px !important;
+    }
+
+    .new-project-form input {
+        width: 90%;
+
+    }
+    .add-item-form input {
+        width: 90%;
     }
     
 }
