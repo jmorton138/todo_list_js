@@ -2,7 +2,7 @@ html, body {
     min-height: 100%;
 }
 * {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     color: #434544;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
@@ -221,6 +221,7 @@ input[type=date], select {
     text-align: center;
     margin-top: 0;
     margin-bottom: 15px;
+    width: 50%;
 }
 
 .project {
@@ -246,7 +247,7 @@ input[type=date], select {
     /* margin-bottom: 20px; */
     display: grid;
     align-items: center;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
     justify-content: space-between;
     padding: 30px;
@@ -258,6 +259,56 @@ input[type=date], select {
 .list-item:hover {
     background: rgba(241, 235, 245, 0.9);
 
+}
+
+@media (max-width: 1250px) {
+
+    .task-body {
+        text-align: center;
+        padding-left: 30px;
+    }
+
+
+    #content {
+        width: 90%;
+
+
+
+    }
+    .add-project-popup {
+        width: 45px;
+
+    }
+    .add-item-popup {
+        width: 45px;
+
+
+    }
+
+}
+
+@media (max-width: 700px)  {
+    #content {
+        grid-template-columns: 1fr;
+    }
+    .list-item {
+        margin-left: 0;
+    }
+    .projects {
+        margin-top: 50px;
+        order: 1;
+        text-align: center;
+    }
+    .projects h2 {
+        margin: auto;
+    }
+    .project {
+        display: inline-block;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 0px;
+    }
+    
 }
 
 .edit-btn {
