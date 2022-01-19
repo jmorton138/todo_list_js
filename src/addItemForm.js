@@ -9,7 +9,7 @@ const addItemForm = (list) => {
     var description =  document.querySelector('#add-task-desc');
     var dueDate =  document.querySelector('#add-task-date');
     var priority =  document.querySelector('#add-task-priority');
-
+    
     const addItemBtn = document.createElement('button');
     addItemBtn.className = "add-item-btn";
     addItemBtn.textContent = "Add a task";
